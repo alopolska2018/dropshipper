@@ -1,0 +1,28 @@
+Date: Tue, 11 Feb 2020 13:31:34 GMT
+Content-Type: text/html;charset=UTF-8
+Set-Cookie: ali_apache_id=11.10.5.1.1581427894301.188305.2; path=/; domain=.aliexpress.com; expires=Wed, 30-Nov-2084 01:01:01 GMT
+Set-Cookie: xman_us_f=x_locale=pl_PL&x_l=0&x_c_chg=1&acs_rt=26889b3dfb8b44a5808305d8e00fe4a3; Domain=.aliexpress.com; Expires=Sun, 29-Feb-2088 16:45:41 GMT; Path=/
+Set-Cookie: acs_usuc_t=x_csrf=l0tx6z9p8gsk&acs_rt=26889b3dfb8b44a5808305d8e00fe4a3; Domain=.aliexpress.com; Path=/
+Set-Cookie: intl_locale=pl_PL; Domain=.aliexpress.com; Path=/
+Set-Cookie: aep_usuc_f=site=pol&c_tp=USD&region=PL&b_locale=pl_PL; Domain=.aliexpress.com; Expires=Sun, 29-Feb-2088 16:45:41 GMT; Path=/
+Set-Cookie: xman_t=V7qbdJRmABzhel32ov8yCV7y19UqqXoMfMoG4EdvAUABXZMg3puHUHfIiLTR0v6J; Domain=.aliexpress.com; Path=/; HttpOnly
+Set-Cookie: intl_common_forever=LePFWE4aX4OZqECZlY/2eeBPeyVjTQ18CffHKZz+TpiWFQd0nVMIgg==; Domain=.aliexpress.com; Expires=Sun, 29-Feb-2088 16:45:41 GMT; Path=/; HttpOnly
+Set-Cookie: xman_f=Z8o7omh23tSMxsLtV0K7GkGcd9QLmHvH5VcmO62wucCKZePspvaBSqTay8IIxwZDwZaZrjrsRoqdOiceVunapzsowp7GFCePqMBWtq4yt1HtFJF/RPYaFA==; Domain=.aliexpress.com; Expires=Sun, 29-Feb-2088 16:45:41 GMT; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=172004C06FBFBEB7F17C37807EFC3BB7; Path=/; HttpOnly
+Vary: Accept-Encoding
+P3P: CP="CAO PSA OUR"
+X-Application-Context: ae-glodetail-web:prod,de:7001
+Yakult_Utab: aliabtest30750_33441
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Strict-Transport-Security: max-age=0
+Content-Language: pl-PL
+Content-Encoding: gzip
+Server: Tengine/Aserver
+Eagleeye-Traceid: 0b0a050115814278943022889e9cc6
+Timing-Allow-Origin: *

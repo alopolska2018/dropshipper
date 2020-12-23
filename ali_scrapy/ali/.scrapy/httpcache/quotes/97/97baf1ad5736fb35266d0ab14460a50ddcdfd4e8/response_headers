@@ -1,0 +1,16 @@
+Date: Mon, 17 Feb 2020 16:28:27 GMT
+Content-Type: text/html;charset=UTF-8
+Set-Cookie: ali_apache_id=11.10.5.1.1581956907682.196694.3; path=/; domain=.aliexpress.com; expires=Wed, 30-Nov-2084 01:01:01 GMT
+Set-Cookie: xman_us_f=x_l=0&acs_rt=128d195b4e2448ffb44eb4cb4510dcee; Domain=.aliexpress.com; Expires=Sat, 06-Mar-2088 19:42:34 GMT; Path=/; Secure; SameSite=None
+Set-Cookie: acs_usuc_t=x_csrf=wmv4nir8gvpv&acs_rt=128d195b4e2448ffb44eb4cb4510dcee; Domain=.aliexpress.com; Path=/; Secure; SameSite=None
+Set-Cookie: xman_t=QYD+/BMnyvUtyPF5Ug8NMRpeH68jy2dxpa3eVdUqzFtkcq8P5tJJGYauiRe0oVhp; Domain=.aliexpress.com; Path=/; Secure; SameSite=None; HttpOnly
+Set-Cookie: xman_f=cNuMCA664pa/lODy0C4IEjIppufhnjfCSh3WgcIYGh7EZhGq9x3iuWJKKejtUuKS1tfQ+3nJjAXuWEcvFLM4LhUefHTAFpiZLEgQapiLZ9ZDh5pZ+lPbag==; Domain=.aliexpress.com; Expires=Sat, 06-Mar-2088 19:42:34 GMT; Path=/; Secure; SameSite=None; HttpOnly
+P3P: CP="CAO PSA OUR"
+Cache-Control: no-store
+Access-Control-Allow-Credentials: true
+Bxpunish: 1
+Location: https://login.aliexpress.com/?from=sm&return_url=http://pl.aliexpress.com/item/32950734866.html
+Server: Tengine/Aserver
+Eagleeye-Traceid: 0b0a050115819569076823327efc21
+Strict-Transport-Security: max-age=0
+Timing-Allow-Origin: *

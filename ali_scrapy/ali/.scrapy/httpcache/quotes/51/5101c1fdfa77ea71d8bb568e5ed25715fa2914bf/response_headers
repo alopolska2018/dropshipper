@@ -1,0 +1,18 @@
+Content-Type: text/html;charset=UTF-8
+X-Application-Context: aeproductsourcesite:prod,us:7001
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Strict-Transport-Security: max-age=31536000
+Content-Encoding: gzip
+Server: Tengine/Aserver
+Eagleeye-Traceid: 0ab6f83a16070839310884299e7c1f
+Timing-Allow-Origin: *
+Cache-Control: max-age=31536000
+Date: Fri, 04 Dec 2020 12:12:11 GMT
+Vary: Accept-Encoding
+Set-Cookie: ali_apache_id=10.182.248.58.160708393189.635506.2; path=/; domain=.aliexpress.com; expires=Wed, 30-Nov-2084 01:01:01 GMT
+Set-Cookie: XSRF-TOKEN=d6461521-8020-4be9-888d-e7cc6b87f1fc; Path=/; HttpOnly
+Network_Info: PL_KRAKOW_5617
+Served-From: 96.17.152.54

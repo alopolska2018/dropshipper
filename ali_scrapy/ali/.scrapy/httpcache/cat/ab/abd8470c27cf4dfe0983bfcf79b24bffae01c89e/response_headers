@@ -1,0 +1,32 @@
+Content-Type: text/html;charset=UTF-8
+Vary: Accept-Encoding
+P3P: CP="CAO PSA OUR"
+Resin-Trace: ali_resin_trace=ws_semi=0|ws_sclkid=708042|p4pid=071b8afe-fdf1-444c-8c36-ec112d1a7b2b|algo_pvid=50eab4da-53f1-4a1a-8216-11621b78b1b7|btsid=0b0a22a415822118892904470e08e4|ws_se_rst=3532|ws_set=3|ws_ser=1|ws_se_pn=1|ws_is_globalsearch=0|ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_|UTABTest=frontend_layer_5565_5|ws_sefilter=0|ae_subsite=pol,PL,pl_PL,PLN
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Strict-Transport-Security: max-age=0
+Content-Language: pl-PL
+Content-Encoding: gzip
+Access-Control-Allow-Origin: https://hz.aliexpress.com
+Access-Control-Allow-Origin: https://hz.aliexpress.com
+Server: Tengine/Aserver
+Eagleeye-Traceid: 0b0a22a415822118892904470e08e4
+Timing-Allow-Origin: *
+X-Akamai-Transformed: 9 - 0 pmb=mRUM,3
+Date: Thu, 20 Feb 2020 15:18:10 GMT
+Set-Cookie: xman_us_t=; Domain=.aliexpress.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+Set-Cookie: xman_us_f=zero_order=y&x_locale=pl_PL&x_l=0&x_user=EU|EU|shopper|ifm|2407565863&x_c_chg=0&x_as_i=%7B%22cookieCacheEffectTime%22%3A1582212189529%2C%22isCookieCache%22%3A%22Y%22%2C%22ms%22%3A%220%22%7D&acs_rt=c9f726fe89f941fa96eb7d86f5dccbeb; Domain=.aliexpress.com; Expires=Tue, 09-Mar-2088 18:32:16 GMT; Path=/
+Set-Cookie: intl_locale=pl_PL; Domain=.aliexpress.com; Path=/
+Set-Cookie: aep_usuc_f=site=pol&c_tp=PLN&x_alimid=2407565863&isb=y&region=PL&b_locale=pl_PL; Domain=.aliexpress.com; Expires=Tue, 09-Mar-2088 18:32:16 GMT; Path=/
+Set-Cookie: xman_t=; Domain=.aliexpress.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly
+Set-Cookie: intl_common_forever=QeHs6XC4BIYtsux6OIL/YhgVj6sYxa2bEibkZONYfx4f/QZwmdSQ+w==; Domain=.aliexpress.com; Expires=Tue, 09-Mar-2088 18:32:16 GMT; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=5CB2057DA846D5A09A38E14B1DAA2A74; Path=/; HttpOnly
+Link: <https://assets.alicdn.com>;rel="preconnect"
+Server-Timing: cdn-cache; desc=MISS
+Server-Timing: edge; dur=9
+Server-Timing: origin; dur=1676

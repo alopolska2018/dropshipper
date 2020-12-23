@@ -1,0 +1,16 @@
+Content-Type: text/html;charset=UTF-8
+X-Application-Context: aeproductsourcesite:prod,us:7001
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Strict-Transport-Security: max-age=0
+Content-Encoding: gzip
+Server: Tengine/Aserver
+Eagleeye-Traceid: 0ab6d70516069182872695872e5af7
+Served-From: 23.62.98.60
+Cache-Control: max-age=31370108
+Date: Fri, 04 Dec 2020 12:14:16 GMT
+Vary: Accept-Encoding
+Network_Info: PL_KRAKOW_5617
+Timing-Allow-Origin: *

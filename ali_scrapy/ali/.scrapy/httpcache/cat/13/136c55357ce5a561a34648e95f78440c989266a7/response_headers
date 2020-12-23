@@ -1,0 +1,20 @@
+Date: Fri, 04 Dec 2020 12:20:16 GMT
+Set-Cookie: xman_us_t=; Domain=.aliexpress.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+Set-Cookie: xman_us_f=zero_order=y&x_locale=pl_PL&x_l=0&last_popup_time=1583418331158&x_user=PL|PL|shopper|ifm|2428464613&no_popup_today=n&x_c_chg=0&x_as_i=%7B%22aeuCID%22%3A%2281dcabc229954468b78f2f50ad80aa03-1585064651291-02112-VnYZvQVf%22%2C%22affiliateKey%22%3A%22VnYZvQVf%22%2C%22channel%22%3A%22AFFILIATE%22%2C%22cv%22%3A%222%22%2C%22isCookieCache%22%3A%22N%22%2C%22ms%22%3A%221%22%2C%22pid%22%3A%22177275576%22%2C%22tagtime%22%3A1585064651291%7D&acs_rt=eb0b558adeda4534b8e07fd309833f34; Domain=.aliexpress.com; Expires=Wed, 22-Dec-2088 15:34:23 GMT; Path=/
+Set-Cookie: intl_locale=pl_PL; Domain=.aliexpress.com; Path=/
+Set-Cookie: aep_usuc_f=site=pol&c_tp=USD&x_alimid=2428464613&isb=y&s_locale=en_US&region=PL&b_locale=pl_PL&ae_u_p_s=0; Domain=.aliexpress.com; Expires=Wed, 22-Dec-2088 15:34:23 GMT; Path=/
+Set-Cookie: xman_t=; Domain=.aliexpress.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly
+Set-Cookie: intl_common_forever=2/l7bMsBLj3DTRtjLmIUwPCektbUjjOcX6loUnQZv19RpAgl600mkg==; Domain=.aliexpress.com; Expires=Wed, 22-Dec-2088 15:34:23 GMT; Path=/; HttpOnly
+P3P: CP="CAO PSA OUR"
+Location: https://pl.aliexpress.com/category/205895301/swimsuit.html?CatId=205895301&isFreeShip=y&isFavorite=y&SortType=total_tranpro_desc&page=1&groupsort=1&isrefine=y
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Strict-Transport-Security: max-age=0
+Server: Tengine/Aserver
+Eagleeye-Traceid: 2100bdf016070844158796787e43d6
+Timing-Allow-Origin: *
