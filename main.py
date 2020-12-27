@@ -22,7 +22,7 @@ class Main():
 
 if __name__ == '__main__':
     test = ScrapyRequests()
-
+    test.run_products_spider('https://pl.aliexpress.com/item/4000948921493.html', 123)
     # ali_cat = '200000669'
     # scrape_qty = 1
     # main = Main()

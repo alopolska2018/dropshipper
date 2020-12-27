@@ -1,10 +1,12 @@
 import requests, json
 import subprocess, os
+from requests.exceptions import HTTPError
+
 
 
 class ScrapyRequests():
     def __init__(self):
-        self.cookies = self.get_cookies
+        self.REQUEST_URL = 'http://localhost:3000/crawl.json'
 
     # def run_scrapyart_server(self):
     #     path = os.path.join(os.getcwd(), 'run_scrapyrt.bat')
@@ -24,9 +26,24 @@ class ScrapyRequests():
     def run_cat_spider(self):
         pass
 
-    def run_products_spider(self):
-        pass
+    def create_request_body_products_spider(self, url, allegro_cat_id):
+        request = {'url': url, 'callback': 'parse', 'cookies': self.get_cookies()}
 
+        body = {'spider_name': 'products_spider', 'allegro_cat_id': allegro_cat_id, 'request': request}
+        return json.dumps(body)
+
+    def run_products_spider(self, url, allegro_cat_id):
+        body = self.create_request_body_products_spider(url, allegro_cat_id)
+        try:
+            response = requests.post(self.REQUEST_URL, data=body)
+            response.raise_for_status()
+        except HTTPError as http_err:
+            print(f'HTTP error occurred: {http_err}')
+        except Exception as err:
+            print(f'Other error occurred: {err}')
+        else:
+            print('Success!')
+            print(response.text)
 
 # json1 = {
 #     "request": {
