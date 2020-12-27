@@ -11,7 +11,6 @@ class ProductSpider(scrapy.Spider):
     def __init__(self, allegro_cat_id=None, *args, **kwargs):
         super(ProductSpider, self).__init__(*args, **kwargs)
         self.allegro_cat_id = allegro_cat_id
-        print(self.allegro_cat_id)
         self.num_of_attr = 0
         self.items = AliItem()
 

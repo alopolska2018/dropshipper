@@ -1,6 +1,8 @@
 from ali_scrapy.ali.run_scraper import Scraper
+from scrapy_requests.scrapy_requests import ScrapyRequests
 from pathlib import Path
 import sys
+import subprocess
 import streamlit as st
 
 class Main():
@@ -19,11 +21,13 @@ class Main():
         #     st.write("Press the above button..")
 
 if __name__ == '__main__':
-    ali_cat = '200000669'
-    scrape_qty = 1
-    main = Main()
-    scraper = Scraper()
-    scraper.run_products_spider('1213')
+    test = ScrapyRequests()
+
+    # ali_cat = '200000669'
+    # scrape_qty = 1
+    # main = Main()
+    # scraper = Scraper()
+    # scraper.run_products_spider('1213')
     # scraper.run_cat_spider(ali_cat, scrape_qty)
 
     # st.title('Dropshipper')
