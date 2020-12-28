@@ -23,8 +23,10 @@ class ScrapyRequests():
                 cookies[name] = value
         return cookies
 
-    def run_cat_spider(self):
-        pass
+    def generate_url_for_cat_spider(self, aliexpress_cat_id):
+        url = f'https://pl.aliexpress.com/af/category/{aliexpress_cat_id}.html?trafficChannel=af&CatId=200010062&ltype=affiliate&isFreeShip=y&isFavorite=y&SortType=total_tranpro_desc&page=1&groupsort=1&isrefine=y&page=1'
+        return url
+
 
     def create_request_body_products_spider(self, url, allegro_cat_id):
         request = {'url': url, 'callback': 'parse', 'cookies': self.get_cookies()}
@@ -32,10 +34,47 @@ class ScrapyRequests():
         body = {'spider_name': 'products_spider', 'allegro_cat_id': allegro_cat_id, 'request': request}
         return json.dumps(body)
 
+    def create_request_body_cat_spider(self, aliexpress_cat_id, pages):
+        request = {'callback': 'parse', 'cookies': self.get_cookies()}
+
+        body = {'start_requests': True, 'spider_name': 'cat_spider', 'aliexpress_cat_id': aliexpress_cat_id, 'pages': pages, 'request': request}
+        return json.dumps(body)
+
     def run_products_spider(self, url, allegro_cat_id):
         body = self.create_request_body_products_spider(url, allegro_cat_id)
         try:
             response = requests.post(self.REQUEST_URL, data=body)
+            response.raise_for_status()
+        except HTTPError as http_err:
+            print(f'HTTP error occurred: {http_err}')
+        except Exception as err:
+            print(f'Other error occurred: {err}')
+        else:
+            print('Success!')
+            print(response.text)
+
+    def run_cat_spider_post(self, aliexpress_cat_id, pages):
+        body = self.create_request_body_cat_spider(aliexpress_cat_id, pages)
+        try:
+            response = requests.post(self.REQUEST_URL, data=body)
+            response.raise_for_status()
+        except HTTPError as http_err:
+            print(f'HTTP error occurred: {http_err}')
+        except Exception as err:
+            print(f'Other error occurred: {err}')
+        else:
+            print('Success!')
+            print(response.text)
+
+    def run_cat_spider_get(self, aliexpress_cat_id, pages):
+        params = {
+            'spider_name': 'cat_spider',
+            'start_requests': True,
+            'cat_id': aliexpress_cat_id,
+            'pages': pages
+        }
+        try:
+            response = requests.get(self.REQUEST_URL, params)
             response.raise_for_status()
         except HTTPError as http_err:
             print(f'HTTP error occurred: {http_err}')
