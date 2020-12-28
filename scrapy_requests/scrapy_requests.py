@@ -50,8 +50,7 @@ class ScrapyRequests():
         except Exception as err:
             print(f'Other error occurred: {err}')
         else:
-            print('Success!')
-            print(response.text)
+            return response.text
 
     def run_cat_spider_post(self, aliexpress_cat_id, pages):
         body = self.create_request_body_cat_spider(aliexpress_cat_id, pages)
@@ -81,8 +80,7 @@ class ScrapyRequests():
         except Exception as err:
             print(f'Other error occurred: {err}')
         else:
-            print('Success!')
-            print(response.text)
+            return response.text
 
 # json1 = {
 #     "request": {
