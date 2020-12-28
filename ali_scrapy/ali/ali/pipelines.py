@@ -18,9 +18,12 @@ class AliPipeline(object):
         self.collection = db['ali']
 
     def process_item(self, item, spider):
-        print('Processing product_id {}'.format(item['product_id']))
-        try:
-            db_id = self.collection.insert_one({"_id": item['product_id'], "woocommerce_id": 0, "data": item}).inserted_id
-            print('Successfully added product_id: {} to database.'.format(db_id))
-        except DuplicateKeyError:
-            print('Unable to add product_id {}. Id already exist in database.'.format(item['product_id']))
+        if spider.name == 'cat_spider':
+            return item
+        if spider.name == 'products_spider':
+            print('Processing product_id {}'.format(item['product_id']))
+            try:
+                db_id = self.collection.insert_one({"_id": item['product_id'], "woocommerce_id": 0, "data": item}).inserted_id
+                print('Successfully added product_id: {} to database.'.format(db_id))
+            except DuplicateKeyError:
+                print('Unable to add product_id {}. Id already exist in database.'.format(item['product_id']))
