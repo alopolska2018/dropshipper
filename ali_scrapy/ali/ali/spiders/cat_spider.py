@@ -2,7 +2,7 @@ import scrapy
 import js2xml
 import json
 import os
-from ..items import AliItem
+
 class CatSpider(scrapy.Spider):
 
     name = "cat_spider"
@@ -11,9 +11,6 @@ class CatSpider(scrapy.Spider):
         self.cat_id = cat_id
         self.pages = pages
         self.start_urls = self.get_start_urls()
-        print('dupa')
-        print(self.start_urls)
-        self.logger.info(self.start_urls)
         self.clear_log()
         self.cookies = self.get_cookies()
 
@@ -65,8 +62,9 @@ class CatSpider(scrapy.Spider):
         products = products[:-1]
         products_json = json.loads(products)
         urls_to_scrape = self.get_urls_to_scrape(products_json)
-        yield {
-            'url': urls_to_scrape
-        }
+        for item in urls_to_scrape:
+            yield {
+                'url':item
+            }
     # self.save_urls_to_file(urls_to_scrape)
 
