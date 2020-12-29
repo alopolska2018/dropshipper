@@ -3,15 +3,49 @@ from pathlib import Path
 import sys
 import streamlit as st
 import json
+from pymongo import MongoClient
 
 class Main():
     def __init__(self):
         self.add_cwd_to_path()
+        self.client = MongoClient('localhost', 27017)
+        self.db = self.client['ali']
+        self.collection = self.db['ali']
 
     def add_cwd_to_path(self):
         cwd = Path.cwd()
         goal_dir = cwd / 'ali_scrapy'
         sys.path.append(str(goal_dir))
+
+    def check_products_in_db(self, id):
+        result = self.collection.count_documents({"_id":id}) > 0
+        return result
+
+    #In order to check if product is successfully added to db
+    # we need to create a list of id's and check existence of each in db
+    def create_product_list_added_to_db(self, urls):
+        product_list = []
+        for url in urls:
+            product_id = self.extract_product_id_from_url(url)
+            product_list.append(product_id)
+        return product_list
+
+    def check_if_successfully_added(self, product_list):
+        success = []
+        failure = []
+        for id in product_list:
+            id_exist = self.check_products_in_db(int(id))
+            if id_exist:
+                success.append(id)
+            else:
+                failure.append(id)
+        self.print_products_spider_outcome(success, failure)
+
+    def print_products_spider_outcome(self, sucess, failure):
+        st.markdown('**Numery Id poprawnie dodane do bazy:**')
+        st.write(sucess)
+        st.markdown('Numery Id nie dodane do bazy:')
+        st.write(failure)
 
 
     def create_list_of_urls(self, cat_spider_output):
@@ -21,10 +55,11 @@ class Main():
             urls.append(url)
         return urls
 
-        #     result = name.title()
-        #     st.success(result)
-        # else:
-        #     st.write("Press the above button..")
+    def extract_product_id_from_url(self, url):
+        url = url.split('/')
+        url = url[4]
+        return url[:-5]
+
     def stremlit(self):
         st.title('dropshipper')
 
@@ -48,10 +83,12 @@ class Main():
                     # st.json(cat_spider_output['items'])
 
                 urls = self.create_list_of_urls(cat_spider_output['items'])
-                products_spider_output = test.run_products_spider(urls[0], allegro_cat_id)
+                products_spider_output = test.run_products_spider_post(urls, allegro_cat_id)
                 products_spider_output = json.loads(products_spider_output)
                 if products_spider_output['status'] == 'ok':
                     st.success(f'Pobrano {str(products_spider_output["stats"]["item_scraped_count"])} produktów')
+                    product_list = self.create_product_list_added_to_db(urls)
+                    self.check_if_successfully_added(product_list)
                 else:
                     st.error('Wystąpił problem z pobraniem produktu')
 
