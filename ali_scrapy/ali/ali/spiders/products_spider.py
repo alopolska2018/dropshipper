@@ -8,9 +8,10 @@ import os, json
 class ProductSpider(scrapy.Spider):
     name = "products_spider"
 
-    def __init__(self, allegro_cat_id=None, *args, **kwargs):
+    def __init__(self, allegro_cat_id=None, start_urls=None, *args, **kwargs):
         super(ProductSpider, self).__init__(*args, **kwargs)
         self.allegro_cat_id = allegro_cat_id
+        self.start_urls = start_urls
         self.num_of_attr = 0
         self.items = AliItem()
 
