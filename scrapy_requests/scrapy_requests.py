@@ -28,10 +28,10 @@ class ScrapyRequests():
         return url
 
 
-    def create_request_body_products_spider(self, url, allegro_cat_id):
-        request = {'url': url, 'callback': 'parse', 'cookies': self.get_cookies()}
+    def create_request_body_products_spider(self, urls, allegro_cat_id):
+        request = {'callback': 'parse', 'cookies': self.get_cookies()}
 
-        body = {'spider_name': 'products_spider', 'allegro_cat_id': allegro_cat_id, 'request': request}
+        body = {'spider_name': 'products_spider', 'start_requests': 'True', 'allegro_cat_id': allegro_cat_id, 'start_urls': urls, 'request': request}
         return json.dumps(body)
 
     def create_request_body_cat_spider(self, aliexpress_cat_id, pages):
@@ -40,8 +40,8 @@ class ScrapyRequests():
         body = {'start_requests': True, 'spider_name': 'cat_spider', 'aliexpress_cat_id': aliexpress_cat_id, 'pages': pages, 'request': request}
         return json.dumps(body)
 
-    def run_products_spider(self, url, allegro_cat_id):
-        body = self.create_request_body_products_spider(url, allegro_cat_id)
+    def run_products_spider_post(self, urls, allegro_cat_id):
+        body = self.create_request_body_products_spider(urls, allegro_cat_id)
         try:
             response = requests.post(self.REQUEST_URL, data=body)
             response.raise_for_status()
@@ -72,6 +72,24 @@ class ScrapyRequests():
             'cat_id': aliexpress_cat_id,
             'pages': pages
         }
+        try:
+            response = requests.get(self.REQUEST_URL, params)
+            response.raise_for_status()
+        except HTTPError as http_err:
+            print(f'HTTP error occurred: {http_err}')
+        except Exception as err:
+            print(f'Other error occurred: {err}')
+        else:
+            return response.text
+
+    def run_products_spider_get(self, urls, allegro_cat_id):
+        params = {
+            'spider_name': 'products_spider',
+            'start_requests': True,
+            'urls': urls,
+            'allegro_cat_id': allegro_cat_id
+        }
+
         try:
             response = requests.get(self.REQUEST_URL, params)
             response.raise_for_status()
