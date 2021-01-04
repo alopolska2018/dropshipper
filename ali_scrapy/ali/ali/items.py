@@ -23,3 +23,7 @@ class AliItem(scrapy.Item):
     shipping_list = scrapy.Field()
     allegro_category_id = scrapy.Field()
     # woocommerce_id = scrapy.Field()
+
+class CatItem(scrapy.Item):
+    # define the fields for your item here like:
+    url = scrapy.Field()

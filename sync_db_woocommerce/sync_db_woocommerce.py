@@ -9,7 +9,10 @@ from sympy import Symbol, Eq, solve
 
 class SyncDbWoocommerce():
 
-    def __init__(self):
+    def __init__(self, woo_category_id):
+        #woocommerce category, products will be added to this category
+        #TODO accept category tree instead of single category
+        self.woo_category_id = woo_category_id
         #Shipping price for allegro
         self.ALLEGRO_SHIPPING_PRICE = 30
         #Markup in pln
@@ -26,14 +29,13 @@ class SyncDbWoocommerce():
             version="wc/v3",
             timeout = 120
         )
-        self.run()
 
     def clear_log(self):
         with open(r'C:\Users\donniebrasco\PycharmProjects\ali_scrapy\ali\added_products_ids.txt', 'w') as f:
             pass
 
     def run(self):
-        self.clear_log()
+        # self.clear_log()
         self.check_unadded_products_in_woocommerce()
 
     def get_woo_id(self, response):
@@ -62,7 +64,7 @@ class SyncDbWoocommerce():
 
             if woo_id:
                 print('Product: {} successfully added to woocommerce with id: {}'.format(aliexpress_link, woo_id))
-                self.save_added_main_product_id(woo_id)
+                # self.save_added_main_product_id(woo_id)
                 self.add_main_woocommerce_id_to_database(woo_id, db_id)
                 self.get_all_variants_attributes(variants)
                 self.create_variants_woo(woo_id, db_id, variants)
@@ -102,7 +104,8 @@ class SyncDbWoocommerce():
         data['attributes'] = attributes_properties
         data['meta_data'] = meta_data_list
         data['images'] = self.get_image_list(images)
-        # data['categories'] = categories
+        #TODO figure what kind of categories we gonna use
+        data['categories'] = [{'id': int(self.woo_category_id)}]
         # data['images'] = images
         response = self.wcapi.post("products", data).json()
         try:
@@ -230,7 +233,7 @@ class SyncDbWoocommerce():
             for item in response['create']:
                 variant_id = item['id']
                 added_variants.append(variant_id)
-            self.save_added_variants_ids(added_variants)
+            # self.save_added_variants_ids(added_variants)
             print('Variants successfully added to product_id: {}'.format(woo_id))
         except requests.exceptions.Timeout:
             print('Timeout occurred while trying to add variant to product id: {}'.format(woo_id))
@@ -284,5 +287,3 @@ class SyncDbWoocommerce():
                 counter += 1
 
         return attributes_properties_list
-
-a = SyncDbWoocommerce()

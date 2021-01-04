@@ -5,3 +5,4 @@ In order to run:
 3.If you didn't check "Add Anaconda to my PATH environment variable" in anaconda installer you have to add conda to sys path
 as per https://stackoverflow.com/a/58211115
 4.Add shortcut of run_scrapyrt.bat to run automatically at startup as per https://support.microsoft.com/en-us/windows/add-an-app-to-run-automatically-at-startup-in-windows-10-150da165-dcd9-7230-517b-cf3c295d89dd
+5.Edit config.json
